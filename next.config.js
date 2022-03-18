@@ -6,6 +6,7 @@ const withLess = require('next-with-less');
 const nextConfig = {
   reactStrictMode: true
 };
+
 const plugin = [
   // less config
   [
