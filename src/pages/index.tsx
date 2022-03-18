@@ -4,11 +4,7 @@ import type { NextPage } from 'next';
 import MainPage from '../features/main';
 
 const Home: NextPage = () => {
-  return (
-    <>
-      <MainPage />
-    </>
-  );
+  return <MainPage />;
 };
 
 export default Home;
