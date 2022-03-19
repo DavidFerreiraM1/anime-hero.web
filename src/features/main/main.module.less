@@ -1,16 +1,83 @@
-@color-gray1: #313d45;
-@color-gray2: #47545e;
-@color-gary3: #6c7276;
-
-@color-white: #ffffff;
-@color-black: #000000;
-
-@color-yellow1: #ffb800;
-@color-yellow2: #fdca48;
-@color-yellow3: #ffda7c;
-
-@font-family-primary: Nunito;
+@import '../../../styles/colors/white.module.less';
+@import '../../../styles/colors/orange.module.less';
+@import '../../../styles/fonts/nunito.module.less';
 
 .root {
-  background-color: @color-gray1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: @color-white;
+  position: absolute;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.input-name-root {
+  height: auto;
+  width: auto;
+}
+
+.input-name-root .input-name-content {
+  height: 100%;
+  width: 100%;
+}
+
+.input-name-root .label-root {
+  padding: 4px 0px;
+}
+
+.input-name-root .label {
+  font-family: @nunito-font-family;
+  font-style: normal;
+
+  font-size: 16px;
+  line-height: 147%;
+}
+
+.input-name-root .label-1 {
+  font-weight: 200;
+  color: @color-white;
+}
+
+.input-name-root .label-2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: @color-orange1;
+}
+
+.input-name-root .input-root {
+  margin: 32px 0px;
+}
+
+.input-name-root .input-root input {
+  background-color: transparent;
+  padding: 0 4px;
+  margin: 0;
+  border: 0;
+  outline: none;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 132%;
+  letter-spacing: 0.01em;
+  font-feature-settings: 'liga' off;
+  color: @color-white;
+}
+
+.input-name-root .bottom-root {
+  width: 100%;
+  padding: 16px 0;
+}
+
+.input-name-root .bottom-content {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
