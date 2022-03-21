@@ -1,16 +1,29 @@
 /* eslint-disable react/react-in-jsx-scope */
 import type { GetServerSideProps, NextPage } from 'next';
+import animeService from '../../features/home/services';
 
 import HomePage from '../../features/home';
-import { HomePageProps } from '../../features/home/types';
+import { AnimeDataType, HomePageProps } from '../../features/home/types';
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const username = context.query.username;
 
-  return {
-    props: {
-      username
+  const response = await animeService.getList(24);
+  const list = await response.json();
+
+  const notFound = response.status !== 200;
+
+  const props: HomePageProps = {
+    username: 'usuário',
+    data: {
+      list: list.data as Array<AnimeDataType>,
+      offset: 24
     }
+  };
+
+  return {
+    props,
+    notFound
   };
 };
 
