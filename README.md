@@ -1,5 +1,5 @@
 ### INTRO
-A aplicação web consiste em uma solução mobile que possibilida o usuário visualizar algumas listagens de animes e ler a sinopse de cada um deles.
+A aplicação web consiste em uma solução mobile que possibilida o usuário visualizar uma lista de animes e ler a sinopse de cada um deles.
 
 Um dos objetivos da aplicação também consiste em assegurar que o desenvolvedor responsável possui conhecimentos e habilidades para o bom desenvolvimento de uma aplicação web com React e NEXtJs.
 
