@@ -1,4 +1,4 @@
-const baseUrl = 'https://kitsu.io/api/edge';
+const baseUrl = process.env.NEXT_PUBLIC_KITSU_API;
 
 const headersDefault = {
   'Content-Type': 'application/json'
