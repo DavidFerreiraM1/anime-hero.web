@@ -1,5 +1,12 @@
+export interface AnimeListContextType {
+  inputTextFilter: string;
+  inputTextFilterHandler(val: string): void;
+  setList(list: Array<AnimeDataType>): void;
+  listByFilter: Array<AnimeDataType>;
+  list: Array<AnimeDataType>;
+}
+
 export interface HomePageProps {
-  username: string;
   data: {
     offset: number;
     list: Array<AnimeDataType>;
@@ -10,7 +17,7 @@ export interface AnimeDataType {
   id: string;
   type: 'anime';
   links: {
-    self: 'string';
+    self: string;
   };
   attributes: {
     createdAt: Date;

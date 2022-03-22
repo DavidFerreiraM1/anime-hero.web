@@ -41,6 +41,7 @@ export default function Filter() {
         </div>
         <div className={styles['input-text']}>
           <input
+            data-testid="text-input-filter"
             id="text-input-filter"
             placeholder="Pesquise seu anime pelo nome"
             value={inputTextFilter}
@@ -51,6 +52,7 @@ export default function Filter() {
         </div>
         <div className={styles['clear-input-icon']}>
           <button
+            data-test="reset-input-filter"
             disabled={inputResetHandler().disable}
             onClick={onClickInputReset}
           >

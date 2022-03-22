@@ -1,17 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import { AnimeDataType } from './types';
+import { AnimeDataType, AnimeListContextType } from './types';
 import service from './services';
 
-const Context = React.createContext(
-  {} as {
-    inputTextFilter: string;
-    inputTextFilterHandler(val: string): void;
-    setList(list: Array<AnimeDataType>): void;
-    listByFilter: Array<AnimeDataType>;
-    list: Array<AnimeDataType>;
-  }
-);
+const Context = React.createContext({} as AnimeListContextType);
 
 let debounceTimer: any = null;
 

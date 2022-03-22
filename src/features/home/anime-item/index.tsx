@@ -24,7 +24,10 @@ export default function AnimeItem(props: AnimeItemProps) {
         <span className={styles['title-span']}>
           <span>Título</span>
         </span>
-        <span className={styles['title-description']}>
+        <span
+          data-testid={props.data.id}
+          className={styles['title-description']}
+        >
           {props.data.attributes.titles.en
             ? props.data.attributes.titles.en
             : 'Não informado'}

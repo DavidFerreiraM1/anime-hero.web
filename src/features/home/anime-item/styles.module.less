@@ -1,3 +1,5 @@
+@import '../../../../styles/media-queries/md.less';
+
 .root {
   height: auto;
   width: auto;
@@ -49,4 +51,16 @@
   color: #dfe2e4;
   display: block;
   padding: 2px 0;
+}
+
+@media @md-max {
+  .item-post img {
+    height: auto;
+    width: 112px;
+    border-radius: 4px;
+  }
+
+  .item-title {
+    max-width: 112px;
+  }
 }

@@ -44,7 +44,7 @@ export default function Content(props: ModalContentProps) {
         </div>
         <div className={styles['info-content']}>
           <span>Descrição</span>
-          <p>{props.data.attributes.description}</p>
+          <p data-testid="description">{props.data.attributes.description}</p>
         </div>
       </div>
     </div>
