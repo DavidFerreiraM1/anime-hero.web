@@ -1,5 +1,4 @@
 export interface HomePageProps {
-  username: string;
   data: {
     offset: number;
     list: Array<AnimeDataType>;
@@ -10,7 +9,7 @@ export interface AnimeDataType {
   id: string;
   type: 'anime';
   links: {
-    self: 'string';
+    self: string;
   };
   attributes: {
     createdAt: Date;
