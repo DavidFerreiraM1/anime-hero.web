@@ -13,7 +13,9 @@ export default function Filter() {
   );
 
   const onClickInputReset = React.useCallback(() => {
-    if (inputTextFilter !== '') inputTextFilterHandler('');
+    if (inputTextFilter !== '') {
+      inputTextFilterHandler('');
+    }
   }, [inputTextFilter]);
 
   const inputResetHandler = React.useCallback(() => {
@@ -43,6 +45,8 @@ export default function Filter() {
             placeholder="Pesquise seu anime pelo nome"
             value={inputTextFilter}
             onChange={changeValue}
+            autoCorrect="off"
+            autoComplete="off"
           />
         </div>
         <div className={styles['clear-input-icon']}>
