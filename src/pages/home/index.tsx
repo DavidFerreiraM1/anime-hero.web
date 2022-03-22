@@ -5,12 +5,9 @@ import animeService from '../../features/home/services';
 import HomePage from '../../features/home';
 import { AnimeDataType, HomePageProps } from '../../features/home/types';
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const username = context.query.username;
-
+export const getServerSideProps: GetServerSideProps = async () => {
   const response = await animeService.getList(24);
   const list = await response.json();
-
   const notFound = response.status !== 200;
 
   const props: HomePageProps = {
