@@ -1,0 +1,75 @@
+@import '../../../../styles/colors/white.module.less';
+@import '../../../../styles/media-queries/md.less';
+
+.root {
+  padding: 0 4px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  height: 32px;
+}
+
+.search-icon {
+  color: #797979;
+  height: 100%;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon span {
+  font-size: 18px;
+}
+
+.input-text {
+  width: 420px;
+}
+
+.input-text input {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+  padding: 0px 4px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 147%;
+  color: @color-white;
+}
+
+.clear-input-icon button {
+  width: 100%;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+}
+
+.clear-input-icon button:disabled {
+  cursor: default;
+}
+
+.clear-input-icon button span {
+  color: @color-white;
+  font-size: 16px;
+}
+
+.clear-input-icon button .disabled-span {
+  color: #797979;
+}
+
+@media @md-max {
+  .input-text {
+    width: 100%;
+  }
+}
