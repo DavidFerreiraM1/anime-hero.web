@@ -19,6 +19,7 @@ export interface AnimeDataType {
     synopsis: string;
     description: string;
     coverImageTopOffset: number;
+    ageRattingGuide: string;
     titles: {
       en: string;
       en_jp: string;
@@ -51,9 +52,32 @@ export interface AnimeDataType {
         };
       };
     };
+    coverImage?: {
+      tiny: string;
+      large: string;
+      small: string;
+      original: string;
+      meta: {
+        dimensions: {
+          tiny: {
+            width: number;
+            height: number;
+          };
+          large: {
+            width: number;
+            height: number;
+          };
+          small: {
+            width: number;
+            height: number;
+          };
+        };
+      };
+    };
   };
 }
 
 export interface AnimeItemProps {
   data: AnimeDataType;
+  onClick: (id: string) => void;
 }
