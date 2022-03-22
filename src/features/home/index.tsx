@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import { Button } from 'antd';
 
 import { HomePageProps } from './types';
 import Filter from './filter';
@@ -24,11 +23,6 @@ export default function Home(props: HomePageProps) {
           <Filter />
           <ListByFilter />
           <List list={props.data.list} />
-          <div className={styles['bottom-list-root']}>
-            <div className={styles['bottom-list']}>
-              <Button type="link">Carregar mais itens</Button>
-            </div>
-          </div>
         </div>
       </div>
     </AnimeListProvider>
