@@ -11,7 +11,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const notFound = response.status !== 200;
 
   const props: HomePageProps = {
-    username: 'usuário',
     data: {
       list: list.data as Array<AnimeDataType>,
       offset: 24
