@@ -36,7 +36,11 @@ export default function Content(props: ModalContentProps) {
       <div className={styles['info-root']}>
         <div className={styles['info-content']}>
           <span>Título</span>
-          <p>{props.data.attributes.titles.en}</p>
+          <p>
+            {props.data.attributes.titles.en
+              ? props.data.attributes.titles.en
+              : 'Não informado'}
+          </p>
         </div>
         <div className={styles['info-content']}>
           <span>Descrição</span>
