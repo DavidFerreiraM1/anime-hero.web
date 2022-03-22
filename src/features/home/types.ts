@@ -1,3 +1,11 @@
+export interface AnimeListContextType {
+  inputTextFilter: string;
+  inputTextFilterHandler(val: string): void;
+  setList(list: Array<AnimeDataType>): void;
+  listByFilter: Array<AnimeDataType>;
+  list: Array<AnimeDataType>;
+}
+
 export interface HomePageProps {
   data: {
     offset: number;
