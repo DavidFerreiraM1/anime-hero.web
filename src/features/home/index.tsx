@@ -1,16 +1,15 @@
 import React from 'react';
-import { HomePageProps } from './types';
-import styles from './styles.module.less';
-import Filter from './filter';
-import AnimeListProvider from './context';
-import AnimeItem from './anime-item';
 import { Button } from 'antd';
 
-export default function Home(props: HomePageProps) {
-  React.useEffect(() => {
-    console.log(props.data.list);
-  }, []);
+import { HomePageProps } from './types';
+import Filter from './filter';
+import AnimeListProvider from './context';
+import ListByFilter from './list-by-filter';
 
+import styles from './styles.module.less';
+import List from './list';
+
+export default function Home(props: HomePageProps) {
   return (
     <AnimeListProvider>
       <div className={styles['container-root']}>
@@ -21,16 +20,9 @@ export default function Home(props: HomePageProps) {
               <h3>Encontre seus animes favoritos aqui</h3>
             </hgroup>
           </div>
-          <div>
-            <Filter />
-          </div>
-          <div className={styles['list-root']}>
-            <div className={styles['list-wrapper']} role="list">
-              {props.data.list.map((item, index) => {
-                return <AnimeItem key={index} data={item} />;
-              })}
-            </div>
-          </div>
+          <Filter />
+          <ListByFilter />
+          <List list={props.data.list} />
           <div className={styles['bottom-list-root']}>
             <div className={styles['bottom-list']}>
               <Button type="link">Carregar mais itens</Button>

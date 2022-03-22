@@ -5,6 +5,12 @@ function getList(offset: number) {
   return kitsuApi.get(url);
 }
 
+function getListByFilter(text: string) {
+  const url = `anime?filter[text]=${text}`;
+  return kitsuApi.get(url);
+}
+
 export default {
-  getList
+  getList,
+  getListByFilter
 };
