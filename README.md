@@ -21,7 +21,7 @@ yarn dev -  Executa um server local para subir o projeto
 ```
 
 
-Link para acessar a
+Link para acessar a paǵina - 
 https://anime-hero-web-fb4kcz7o7-davidferreiram1.vercel.app/
 
 
