@@ -17,11 +17,16 @@ Fazer o clone, na raiz do projeto executar os comendaos abaixo:
 
 ```
 yarn - Recuperar dependências do projeto
+```
+Criar um arquivo na raiz do projeto `.env.local` e adicionar a variável de ambiente `NEXT_PUBLIC_KITSU_API=<API_URL>`
+<br />
+[Clique aqui para acessar a documentação da api](https://kitsu.docs.apiary.io/#)
+```
 yarn dev -  Executa um server local para subir o projeto
 ```
 
-
-Link para acessar a paǵina - 
+<br />
+Link para acessar a aplicação - 
 https://anime-hero-web-fb4kcz7o7-davidferreiram1.vercel.app/
 
 
